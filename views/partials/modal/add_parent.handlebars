@@ -1,0 +1,108 @@
+<section id="add-parent"> 
+    <div class="content">
+        <div class="grid-container">
+            <ul class="tabs" 
+                data-update-history="true" 
+                data-deep-link-smudge="true" 
+                data-deep-link-smudge-delay="500" 
+                data-tabs 
+                id="parent-tabs" 
+                style="padding-top: 4vh">
+                
+                <li class="tabs-title title-tab-green"><a href="#parent1" aria-selected="true" class="is-active">Contact Details</a></li>
+                <li id="parent-2" class="tabs-title title-tab-blue"><a href="#parent2">Address</a></li>
+            </ul>
+
+            <div class="tabs-content" data-tabs-content="parent-tabs">
+                <!-- Section 1: panel 1 -->
+                <div class="tabs-panel is-active" id="parent1">
+                    <form id= "create-form">
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="parentFirstName"><p>First Name</p></label>
+                            <input type="text" class="form-control" id="parentFirstName" placeholder="John">
+                        </div>
+                        </div>
+
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="parentLastName"><p>Last Name</p></label>
+                            <input type="text" class="form-control" id="parentLastName" placeholder="Doe">
+                        </div>
+                        </div>
+
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="email"><p>Email Address</p></label>
+                            <input type="text" class="form-control" id="email" placeholder="me@yahoo.com">
+                        </div>
+                        </div>
+
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="parentPhoneNumber"><p>Phone Number</p></label>
+                            <input type="text" class="form-control" id="parentPhoneNumber" placeholder="(919) 999-9999">
+                        </div>
+                        </div>
+
+                        <a type="submit" href="#parent2" id="new-parent-main" class="button expanded panel-buttons">Next</a>
+                    </form>
+                </div>
+                <!-- Section 2: panel 2 -->
+                <div class="tabs-panel" id="parent2">
+                    <form>
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="streetAddress"><p>Street Address</p></label>
+                            <input type="text" class="form-control" id="streetAddress" placeholder="311 Main Street">
+                        </div>
+                        </div>
+
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="city"><p>City</p></label>
+                            <input type="text" class="form-control" id="city" placeholder="Durham">
+                        </div>
+                        </div>
+
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="state"><p>State</p></label>
+                            <input type="text" class="form-control" id="state" placeholder="NC">
+                        </div>
+                        </div>
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="zipcode"><p>Zip Code</p></label>
+                            <input type="text" class="form-control" id="zipcode" placeholder="27713">
+                        </div>
+                        </div>
+
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="custodyRelation"><p>What is your relationship to the child?</p></label>
+                            <input type="text" class="form-control" id="custodyRelation" placeholder="Mother / Grandparent">
+                        </div>
+                        </div>
+                        
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <div class="grid-x grid-padding-x">
+                            <fieldset>
+                                <legend><p>Does your child live with you?</p></legend>
+                                <input type="checkbox" name="livingWith" value="yes" id="livingWith"><label for="livingWith-yes"><p>Yes</p></label>
+                                <input type="checkbox" name="livingWith" value="no" id="livingWith"><label for="livingWith-no"><p>No</p></label>
+                            </fieldset>
+                            </div>
+                        </div>
+                        </div>
+
+                        <a type="submit" id="add-new-parent" class="button expanded parent-update panel-buttons">Submit</a>
+                    </form>
+                </div>
+                 {{!-- <p class="text-center" id="parent-info-updated">Thank you, your information has been updated!</p> --}}
+            </div>
+
+        </div>
+    </div>
+</section>

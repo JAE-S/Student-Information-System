@@ -1,0 +1,124 @@
+{{> nav/nav-block user=false register=true}}
+
+<section style="background-color:#F7CD1C!important"> 
+  <div class="content">
+    <div class="grid-container" style="background-image: url('/static-files/assets/images/log_in_container.png'); background-repeat: no-repeat; background-size: 100%; height: 600px;">
+      <div class="grid-container" style="padding-top: 6vh; padding-right: 120px; padding-left: 280px;">
+        
+        <div class="text-center">
+          <h1 style="font-size: 2.6rem">Create A New Account!</h1>
+          {{!-- <h3 id="create-err-msg"></h3> --}}
+        </div>
+      <!-- Verify Account Type -->
+        <div id="accountType"> 
+          <form>
+            <fieldset style="border: 1px solid #DDDDDD; padding: 0 1.11111rem; margin-bottom: 3vh; margin-top: 6vh">
+              <legend>Account Type</legend>
+              <label>Are you a Parent or a teacher?
+              <div class="large-6 columns">
+                <input id="parent" class="userType" value="parent" type="checkbox"><label for="parent">Parent</label>
+                <input id="teacher" class="userType" value="teacher" type="checkbox"><label for="teacher">Teacher</label>
+              </div>
+              </label>
+            </fieldset>
+          </form>
+        </div>
+
+      <!-- Registration Page -->
+      <div id="register-accounts"> 
+        <h3 id="err-msg"></h3>
+        <h5 class="text-center">Please complete all of the fields below.</h5>
+         <!-- First Name -->
+        <form id= "create-form">
+          <div class="grid-x grid-padding-x">
+            <div class="form-group large-6 cell">
+              <label for="inputFirst">First Name</label>
+              <input type="text" class="form-control" id="inputFirst" placeholder="John">
+            </div>
+            <!-- Last Name -->
+            <div class="form-group large-6 cell">
+              <label for="inputLast">Last Name</label>
+              <input type="text" class="form-control" id="inputLast" placeholder="Doe">
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="form-row">
+            <div class="form-group large-12 cell" style="padding-left: 16px; padding-right: 16px;">
+              <label for="inputEmail">Email</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+          </div>
+          <!-- Password -->
+          <div class="form-row">
+            <div class="form-group large-12 cell" style="padding-left: 16px; padding-right: 16px;">
+              <label for="inputPassword">Password</label>
+              <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            </div>
+          </div> 
+
+          <div>
+            <h2 id="message"></h2>
+          </div>
+          <!-- Submit -->
+          <button style="margin-left: 16px" type="submit" id="add-user" class="button">Submit</button>
+        </form>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{{!-- 
+      <header class="create-user-wrap header-wrap" align="center">
+        <h1>Create Your Account</h1>
+       
+      </header>
+
+      <h3 id="err-msg"></h3>
+
+      <form id= "create-form">
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="inputFirst">First Name</label>
+            <input type="text" class="form-control" id="inputFirst" placeholder="John">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="inputLast">Last Name</label>
+            <input type="text" class="form-control" id="inputLast" placeholder="Doe">
+          </div>
+        </div>
+        
+         <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="inputUser">Are you a parent or a teacher?</label>
+            <input type="text" class="form-control" id="inputUser" placeholder="Doe">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+          </div>
+        </div>
+
+        <div>
+          <h2 id="message"></h2>
+        </div>
+
+        <button type="submit" id="add-user" class="button">Submit</button>
+      </form>
+    {{!-- </div> --}}
+  </div>
+</div>
+</section> --}}

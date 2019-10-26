@@ -1,0 +1,30 @@
+{{> nav/nav-block}}
+<section style="background-color:#F7CD1C!important"> 
+  <div class="content">
+    <!-- Backgroun Image --> 
+    <div class="grid-container" style="background-image: url('/static-files/assets/images/log_in_container.png'); background-repeat: no-repeat; background-size: 100%; height: 600px;">
+  
+      <div class="grid-container" style="padding-top: 6vh; padding-right: 120px; padding-left: 280px;">
+        <div class="text-center">
+          <h1>Welcome back!</h1>
+          <h4>Please login to your account to continue. </h4>
+        </div>
+        
+        <form>
+          <div class="form-group">
+            <label for="inputAccount">Email</label>
+            <input type="text" class="form-control" id="email">
+          </div>
+
+          <div class="form-group">
+            <label for="inputAccount">Password</label>
+            <input type="password" class="form-control" id="user_password">
+          </div>
+
+          <a id="login" type="button" class="button">Login</a>
+          <a href="/register" type="button" class="button">Register</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

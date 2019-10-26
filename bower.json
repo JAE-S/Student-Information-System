@@ -1,0 +1,20 @@
+{
+  "name": "project2-starter-auth",
+  "description": "Project2 Starter with Express, Handlebars, Sequelize, and Authentication with Passport.",
+  "main": "server.js",
+  "authors": [
+    "MPA <50469825+MPA120@users.noreply.github.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/youngedre/project2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "foundation": "^5.5.3"
+  }
+}

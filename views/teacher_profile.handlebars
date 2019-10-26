@@ -1,0 +1,73 @@
+<!-- Teacher Profile Nav Bar -->
+<div class="top-bar-container" data-sticky-container>
+  <div class="sticky sticky-topbar" style="background-color: #F7CD1C!important" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+    <div class="grid-container">
+      <div style="background-color: #F7CD1C!important" class="top-bar">
+        
+        <div class="top-bar-left">
+          <a style="background-color: transparent; color: #FFFDF5;" type="button" class="button header-button" data-toggle="offCanvasLeft1">Dashboard</a>
+        </div>
+
+        <div class="row top-bar-right"style="display: flex">
+          <a href="/login" style="color: #FFFDF5;">Logout</a>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<section> 
+  <!-- Main Section -->
+  <div class="grid-container">
+    <!-- Add Teacher Modal -->
+    {{> modal/add_teacher}}
+    <!-- Class Roster Modal -->
+    {{> modal/class_roster}}
+    <!-- Splash page for teacher portal -->
+    <div id="teacher-dashboard" class="grid-container" style="margin-top: 4vh;">
+      <div class="grid-x grid-padding-x text-center">
+        <h1 style="color: #F28808; border-bottom: 1px solid #45BED2; padding-bottom:1vh"> Welcome Back {{teacherData.firstName}} {{teacherData.lastName}}!</h1>
+        {{!-- <a class="button" style="margin: 0 auto" data-toggle="offCanvasLeft1">Click me to view the dashboard</a> --}}
+      </div>
+
+      {{> modal/teacher_filter}}
+    </div>
+
+  </div> <!-- End of grid container -->
+
+  <!-- Info for side bar navigation -->
+  <div class="cell">
+    <div class="off-canvas-wrapper" >
+      <div class="off-canvas position-left" style="background-color:#FFFDF5; border: 6px solid #F28808" id="offCanvasLeft1" data-off-canvas>
+    
+        <ul class="off-canvas-list" style="list-style: none">
+          <!-- Logo -->
+          <img style="width: 50%; display: block; margin-top: 10vh; margin-left: 10px!important" src="/static-files/assets/images/logos/s_i_s_logo_orange.png">
+          <!-- Teacher Details Tag -->
+          <li><label style="border-radius: 8px; background-color:#45BED2; color: #FFFDF5; margin-right: 20px;margin-top: 3vh; margin-bottom: 1vh; padding-left: 10px">Teacher Details</label></li>
+          <!-- Dashboard Tag -->
+          <li><a id="dashboard" style="color: #45BED2; padding-left: 8px" data-close>Dashboard</a></li>
+          <!-- My Profile Tag -->
+          <li><a id="teacherProfile" style="color: #45BED2; padding-left: 8px" data-close>My Profile</a></li>
+          <!-- Inbox Tag -->
+          <li><a id="teacherMail" style="color: #45BED2; padding-left: 8px">Inbox</a></li>
+          <p class="notAvailable" style="color: red">This feature is not available yet.</p>
+          <!-- Student Details -->
+          <li><label style="border-radius: 8px; background-color:#63476A; color: #FFFDF5; margin-right: 20px; margin-top: 2vh; margin-bottom: 1vh; padding-left: 10px">Student Details</label></li>
+           <!-- Class Roster Tag -->
+          <li><a id="classRoster" style="color:#63476A; padding-left: 8px" data-close>Class Roster</a></li>
+          <!-- Logout Button -->
+          <li style="margin-top: 10vh; margin-right: 20px"><a  href="/logout"  style="border-radius: 8px; background-color:#F7CD1C!important; color: #FFFDF5" class="button expanded">Logout</a></li>
+          <!-- Close side nav Button -->
+          <button class="close-button" aria-label="Close alert" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+        </ul>
+
+      </div>
+    </div>
+  </div> <!-- End of Side Bar Navigation -->
+
+</section> <!-- End of Section -->

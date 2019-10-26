@@ -1,0 +1,213 @@
+<section id="add-child"> 
+  <div class="content">
+    <div class="grid-container">
+      <!-- Tab headings -->
+      <ul class="tabs" 
+          data-deep-link="true" 
+          data-update-history="true" 
+          data-deep-link-smudge="true" 
+          data-deep-link-smudge-delay="500" 
+          data-tabs 
+          id="add-child-tabs" style="padding-top: 4vh">
+
+        <li id="child-g" class="tabs-title title-tab-green"><a href="#child-general" aria-selected="true" class="is-active">General</a></li>
+        <li id="child-e" class="tabs-title title-tab-red"><a href="#child-emergency">Emergency Information</a></li>
+        <li id="child-a" class="tabs-title title-tab-orange"><a href="#child-allergies">Allergies</a></li>
+        <li id="child-p" class="tabs-title title-tab-blue"><a href="#child-approved-pickup">Approved Pickup</a></li>
+        <li id="child-n" class="tabs-title title-tab-purple"><a href="#child-notes">Notes</a></li>
+
+      </ul>
+      <!-- Table Headings -->
+      <div class="tabs-content" data-tabs-content="add-child-tabs">
+        <!-- Section 1: General -->
+        <div class="tabs-panel is-active" id="child-general">
+          <form id= "create-form">
+              <div class="form-row">
+                <div class="form-group2">
+                  <label for="firstName"><p>First Name</p></label>
+                  <input type="text" class="form-control" id="firstName" placeholder="John">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="lastName"><p>Last Name</p></label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Doe">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="birthDate"><p>Birthdate (Format: YYYY-MM-DD)</p></label>
+                  <input type="text" class="form-control" id="birthDate" placeholder="2015-01-17">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="gender"><p>Gender</p></label>
+                  <input type="text" class="form-control" id="gender" placeholder="Male or Female">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="ethnicity"><p>Ethnicity</p></label>
+                  <input type="text" class="form-control" id="ethnicity" placeholder="Hispanic or non-Hispanic">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="language"><p>What language do you speak at home?</p></label>
+                  <input type="text" class="form-control" id="language" placeholder="English / Spanish">
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="exampleFileUpload" class="button">Upload File</label>
+                <input type="file" id="exampleFileUpload" class="show-for-sr">
+                </div>
+            <a type="submit" href="#child-emergency" id="new-student-main" class="button expanded panel-buttons">Next</a>
+          </form>
+        </div>
+        <!-- Section 2: Emergency Information -->
+        <div class="tabs-panel" id="child-emergency">
+          <form>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="emergencyContactName"><p>Emergency Contact Name</p></label>
+                <input type="text" class="form-control" id="emergencyContactName" placeholder="John Doe">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="emergencyContactPhone"><p>Emergency Contact Phone Number</p></label>
+                <input type="text" class="form-control" id="emergencyContactPhone" placeholder="(919) 999-9999">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="emergencyContactRelation"><p>Emergency Contact Relationship</p></label>
+                <input type="text" class="form-control" id="emergencyContactRelation" placeholder="Grandparent">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="doctorName"><p>Doctor's Name</p></label>
+                <input type="text" class="form-control" id="doctorName" placeholder="John Doe">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="doctorPhone"><p>Doctor's Phone Number</p></label>
+                <input type="text" class="form-control" id="doctorPhone" placeholder="(919) 999-9999">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dentistName"><p>Dentist's Name</p></label>
+                <input type="text" class="form-control" id="dentistName" placeholder="John Doe">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dentistPhone"><p>Dentist's Phone Number</p></label>
+                <input type="text" class="form-control" id="dentistPhone" placeholder="(919) 999-9999">
+              </div>
+            </div>
+
+            <a type="submit" href="#child-allergies" id="new-student-medical-info" class="button expanded panel-buttons">Next</a>
+          </form>
+        </div>
+        <!-- Section 3: Allergies -->
+        <div class="tabs-panel" id="child-allergies">
+          <form>
+
+            <div class="form-row">
+              <!-- Checkbox for allergies -->
+              <div class="form-group col-md-12">
+                <div class="grid-x grid-padding-x">
+                  <fieldset>
+                    <legend><p>Does Your child have any allergies?</p></legend>
+                    <input type="checkbox" name="confirm-allergies" value="yes" id="confirm-allergies-yes"><label for="confirm-allergies-yes"><p>Yes</p></label>
+                    <input type="checkbox" name="confirm-allergies" value="no" id="confirm-allergies-no"><label for="confirm-allergies-no"><p>No</p></label>
+                  </fieldset>
+                </div>
+                <label for="allergyDescription"><p>Allergies (if any)</p></label>
+                <input type="text" class="form-control" id="allergyDescription" placeholder="Peanuts">
+              </div>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+              <fieldset>
+                <legend><p>If you answered yes, how severe are your child's allergies?</p></legend>
+                <input type="radio" name="allergies" value="Life-Threatening" id="Life-Threatening"><label for="Life-Threatening"><p>life Threatening</p></label>
+                <input type="radio" name="allergies" value="Blue" id="Severe"><label for="Severe"><p>Severe</p></label>
+                <input type="radio" name="allergies" value="Yellow" id="Moderate"><label for="Moderate"><p>Moderate</p></label>
+              </fieldset>
+            </div>
+
+            <a type="submit" href="#child-approved-pickup" id="new-student-allergy" class="button expanded panel-buttons">Next</a>
+          </form>
+        </div>
+        <!-- Section 4: Approved Pickup -->
+        <div class="tabs-panel" id="child-approved-pickup">
+          <form>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pickupFirstName"><p>Approved Pickup: First Name</p></label>
+                <input type="text" class="form-control" id="pickupFirstName" placeholder="John">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pickupLastName"><p>Approved Pickup: Last Name</p></label>
+                <input type="text" class="form-control" id="pickupLastName" placeholder="Doe">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pickupPhoneNumber"><p>Approved Pickup: Phone Number</p></label>
+                <input type="text" class="form-control" id="pickupPhoneNumber" placeholder="(919) 999-9999">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pickupRelation"><p>Approved Pickup: Relation to Student</p></label>
+                <input type="text" class="form-control" id="pickupRelation" placeholder="Grandparent / Babysitter">
+              </div>
+            </div>
+
+            <a type="submit" href="#child-notes"  id="new-student-pickup-info" class="button expanded panel-buttons">Next</a>
+          </form>
+        </div>
+        <!-- Section 5: Notes --> 
+        <div class="tabs-panel" id="child-notes">
+          <form>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="parent-notes"></label>
+                <div class="large-12 columns">
+                  <fieldset>
+                    <legend><p>Additional notes for the teacher.</p> </legend>
+                    <textarea placeholder="Additional notes" id="notes"></textarea>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <a type="submit" id="add-new-student" class="button expanded panel-buttons">Submit Information</a>
+          </form>  
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>  <!-- End of Add Child Section -->

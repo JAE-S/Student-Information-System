@@ -1,0 +1,232 @@
+<section id="myClass" style="background-color: #FFFDF5"> 
+  <div class="content ">
+    <div class="grid-container">
+      
+      <table id="student-data" class="table-expand">
+        <thead style="border: none;">
+          <tr class="table-expand-row">
+            <th style="width: 100px">Profile Photo</th>
+            <th style="width: 100px">Child's Name</th>
+            <th style="width: 100px">Parent's Name</th>
+            <th style="width: 100px">Parent's Contact</th>
+            <th style="width: 100px">Expand Data</th>
+          </tr>
+        </thead>
+
+        <tbody
+            data-deep-link="true" 
+            data-update-history="true" 
+            data-deep-link-smudge="true" 
+            data-deep-link-smudge-delay="500" 
+            data-tabs 
+            id="class-roster" style="padding-top: 4vh">
+            
+            {{#each classRosterData}}
+
+            <tr class="table-expand-row" data-open-details>
+                <td><img class="student-photo" src="/static-files/assets/images/stock_images/{{imageLink}}"></img></td>
+                <td>{{firstName}} {{lastName}}</td>
+                <td>{{Parent.firstName}} {{Parent.lastName}}</td>
+                <td>{{Parent.phoneNumber}}</td>
+                <td><span class="expand-icon">Click to View</span></td>
+            </tr>
+
+            <tr class="table-expand-row-content">
+                <td colspan="8" class="table-expand-row-nested">
+                    <div class="grid-container">
+                        <ul class="tabs">
+                            <li class="tabs-title title-tab-green"><a href="#student-info-{{id}}" aria-selected="true">Student Info</a></li>
+                            <li class="tabs-title title-tab-red"><a href="#emergency-{{id}}">Emergency Contacts</a></li>
+                            <li class="tabs-title title-tab-orange"><a href="#allergies-{{id}}">Allergies</a></li>
+                            <li class="tabs-title title-tab-blue"><a href="#notes-{{id}}">Notes</a></li>
+                            <li class="tabs-title title-tab-purple"><a href="#parent-{{id}}">Parent Info</a></li>
+                        </ul>
+
+                        <div class="tabs-content" data-tabs-content="class-roster">
+                            <!-- Section 1: Student Info -->
+                            <div class="tabs-panel" id="student-info-{{id}}" style="background-color: #71960C">
+                                <form id= "create-form">
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="studentFirstName-{{id}}"><p>First Name</p></label>
+                                        <input type="text" class="form-control" id="studentFirstName-{{id}}" value="{{firstName}}">
+                                    </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="studentLastName-{{id}}"><p>Last Name</p></label>
+                                        <input type="text" class="form-control" id="studentLastName-{{id}}" value="{{lastName}}">
+                                    </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="studentBirthDate-{{id}}"><p>Birthdate (Format: YYYY-MM-DD)</p></label>
+                                        <input type="text" class="form-control" id="studentBirthDate-{{id}}" value="{{birthDate}}">
+                                    </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="studentGender-{{id}}"><p>Gender</p></label>
+                                        <input type="text" class="form-control" id="studentGender-{{id}}" value="{{gender}}">
+                                    </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="studentEthnicity-{{id}}"><p>Ethnicity</p></label>
+                                        <input type="text" class="form-control" id="studentEthnicity-{{id}}" value="{{ethnicity}}">
+                                    </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="studentLanguage-{{id}}"><p>What language do you speak at home?</p></label>
+                                        <input type="text" class="form-control" id="studentLanguage-{{id}}" value="{{primaryLanguage}}">
+                                    </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Section 2: Emergency Contacts -->
+                            <div class="tabs-panel" id="emergency-{{id}}" style="background-color: #CC5621">
+                                <form>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="emergencyContactName-{{id}}"><p>Emergency Contact Name</p></label>
+                                        <input type="text" class="form-control" id="emergencyContactName-{{id}}" value="{{emergencyContactName}}">
+                                    </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="emergencyContactPhone-{{id}}"><p>Emergency Contact Phone Number</p></label>
+                                        <input type="text" class="form-control" id="emergencyContactPhone-{{id}}" value="{{emergencyContactPhone}}">
+                                    </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="emergencyContactRelation-{{id}}"><p>Emergency Contact Relationship</p></label>
+                                        <input type="text" class="form-control" id="emergencyContactRelation-{{id}}" value="{{emergencyContactRelation}}">
+                                    </div>
+                                    </div>
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="doctorName-{{id}}"><p>Doctor's Name</p></label>
+                                        <input type="text" class="form-control" id="doctorName-{{id}}" value="{{doctorName}}">
+                                    </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="doctorPhone-{{id}}"><p>Doctor's Phone Number</p></label>
+                                        <input type="text" class="form-control" id="doctorPhone-{{id}}" value="{{doctorPhone}}">
+                                    </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="dentistName-{{id}}"><p>Dentist's Name</p></label>
+                                        <input type="text" class="form-control" id="dentistName-{{id}}" value="{{dentistName}}">
+                                    </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="dentistPhone-{{id}}"><p>Dentist's Phone Number</p></label>
+                                        <input type="text" class="form-control" id="dentistPhone-{{id}}" value="{{dentistPhone}}">
+                                    </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Section 3: Allergies -->
+                            <div class="tabs-panel" id="allergies-{{id}}" style="background-color: #F28808">
+                                <form>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <div class="grid-x grid-padding-x">
+                                    <fieldset>
+                                        <legend><p>Does Your child have any allergies?</p></legend>
+                                        <input type="checkbox" name="confirm-allergies" value="yes" id="confirm-allergies-yes-{{id}}"><label for="confirm-allergies-yes-{{id}}"><p>Yes</p></label>
+                                        <input type="checkbox" name="confirm-allergies-{{id}}" value="no" id="confirm-allergies-no-{{id}}"><label for="confirm-allergies-no"><p>No</p></label>
+                                    </fieldset>
+                                    </div>
+                                    
+                                        <label for="allergyDescription-{{id}}"><p>Allergies (if any)</p></label>
+                                        <input type="text" class="form-control" id="allergyDescription-{{id}}" value="{{allergyDescription}}">
+                                    </div>
+                                    </div>
+                                    <div class="grid-x grid-padding-x">
+                                    <fieldset>
+                                        <legend><p>If you answered yes, how severe are your child's allergies? (1 = severe 3 = mild)</p></legend>
+                                        <input type="radio" name="allergies" value="life-threatening" id="life-threatening-{{id}}"><label for="life-threatening-{{id}}"><p>Life Threatening</p></label>
+                                        <input type="radio" name="allergies" value="Blue" id="Severe-{{id}}"><label for="Severe-{{id}}"><p>Severe</p></label>
+                                        <input type="radio" name="allergies" value="Yellow" id="Moderate-{{id}}"><label for="Moderate-{{id}}"><p>Moderate</p></label>
+                                    </fieldset>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Section 4: Notes --> 
+                            <div class="tabs-panel" id="notes-{{id}}" style="background-color: #45BED2">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="parent-notes"></label>
+                                            <div class="large-12 columns">
+                                                <fieldset>
+                                                    <legend><p>Additional notes for the teacher. </p></legend>
+                                                    <textarea>{{notes}}</textarea>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>  
+                            </div>
+                            <!-- Section 5: Parent Info --> 
+                            <div class="tabs-panel" id="parent-{{id}}" style="background-color: #63476A">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="parentFirstName-{{id}}"><p>Parent's First Name</p></label>
+                                            <input type="text" class="form-control" id="parentFirstName-{{id}}" value="{{Parent.firstName}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="parentLastName-{{id}}"><p>Parent's Last Name</p></label>
+                                            <input type="text" class="form-control" id="parentLastName-{{id}}" value="{{Parent.lastName}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="email-{{id}}"><p>Parent's Email Address</p></label>
+                                            <input type="text" class="form-control" id="email-{{id}}" value="{{Parent.email}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="parentPhoneNumber-{{id}}"><p>Parent's Phone Number</p></label>
+                                            <input type="text" class="form-control" id="parentPhoneNumber-{{id}}" value="{{Parent.phoneNumber}}">
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    
+      </table> <!-- End of table -->
+    </div>
+  </div>
+</section>

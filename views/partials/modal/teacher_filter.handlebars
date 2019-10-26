@@ -1,0 +1,38 @@
+
+<div class="filter-simple" style="display:table; margin: 0 auto">
+    <div class="content">
+        <div class="grid-container text-center">
+            <!-- Filter Titles --> 
+            <div class="button-group round" style="margin-top: 4vh">
+                <button class="button hollow filter-simple-button is-active filter-btn-1" data-filter="all">Class Roster</button>
+                <button class="button hollow filter-simple-button filter-btn-2" data-filter="allergies">Allergies</button>
+                <button class="button hollow filter-simple-button filter-btn-3" data-filter="approvedPickup">Approved Pickup</button>
+            </div>
+
+            <div class="row small-up-2 medium-up-3 large-up-4">
+                <div class="grid-x grid-padding-x text-center">
+<!-- EDIT Below this line.. these are placeholder images for filtering --> 
+                    
+                    {{#each classRosterData}}
+
+                        {{#if allergies}}
+                            <div class="large-3 cell filter-simple-item allergies">
+                                <img class="allergies" src="/static-files/assets/images/stock_images/{{imageLink}}"></img>
+                                <h5>{{firstName}} {{lastName}}</h5>
+                                <h5>{{allergyDescription}}</h5>
+                            </div>
+                        {{else}}
+                            <div class="large-3 cell filter-simple-item">
+                                <img src="/static-files/assets/images/stock_images/{{imageLink}}"></img>
+                                <h5>{{firstName}} {{lastName}}</h5>
+                            </div>
+                        {{/if}}
+
+                    {{/each}}
+ 
+                </div>
+            </div>
+    </div>
+  </div>
+</div> <!-- End of filtering section --> 
+

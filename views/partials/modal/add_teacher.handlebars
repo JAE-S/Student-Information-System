@@ -1,0 +1,105 @@
+<section id="teacher-profile">
+    <div class="content">
+        <div class="grid-container">
+
+            <ul class="tabs" 
+                data-deep-link="true" 
+                data-update-history="true" 
+                data-deep-link-smudge="true" 
+                data-deep-link-smudge-delay="500" 
+                data-tabs 
+                id="teacher-tabs" style="padding-top: 4vh">
+                <li class="tabs-title title-tab-blue"><a href="#teacher1" aria-selected="true" class="is-active">Class Room Details</a></li>
+                <li id="teacher-2" class="tabs-title title-tab-purple"><a href="#teacher2">Contact Details</a></li>
+            </ul>
+
+            <div class="tabs-content" data-tabs-content="teacher-tabs">
+                <!-- Section 1: Class Room Details -->
+                <div class="tabs-panel is-active" id="teacher1" style="background-color: #45BED2">
+                    <form id= "create-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName"><p>First Name</p></label>
+                                <input type="text" class="form-control" id="firstName" value="{{teacherData.firstName}}" placeholder="Jane">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lastName"><p>Last Name</p></label>
+                                <input type="text" class="form-control" id="lastName" value="{{teacherData.lastName}}" placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="employeeId"><p>Teacher ID</p></label>
+                                <input type="text" class="form-control" id="employeeId" value="{{teacherData.employeeId}}" placeholder="#24681012">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="roomNumber"><p>Class Room Number</p></label>
+                                <input type="text" class="form-control" id="roomNumber" value="{{teacherData.roomNumber}}" placeholder="13">
+                            </div>
+                        </div>
+
+                        <a type="submit" href="#teacher2" id="new-teacher-main" class="button expanded panel-buttons">Next</a>
+                    </form>
+                </div>
+                <!-- Section 2: panel 2 -->
+                <div class="tabs-panel" id="teacher2" style="background-color:#63476A;">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email"><p>Email</p></label>
+                                <input type="text" class="form-control" id="email" value="{{teacherData.email}}" placeholder="teacher@gmail.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phoneNumber"><p>Phone Number</p></label>
+                                <input type="text" class="form-control" id="phoneNumber" value="{{teacherData.phoneNumber}}" placeholder="(919) 999-9999">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="streetAddress"><p>Street Address</p></label>
+                                <input type="text" class="form-control" id="streetAddress" value="{{teacherData.streetAddress}}" placeholder="311 Main Street">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city"><p>City</p></label>
+                                <input type="text" class="form-control" id="city" value="{{teacherData.city}}" placeholder="Durham">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state"><p>State</p></label>
+                                <input type="text" class="form-control" id="state" value="{{teacherData.state}}" placeholder="NC">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="zipcode"><p>Zip Code</p></label>
+                                <input type="text" class="form-control" id="zipcode" value="{{teacherData.zipcode}}" placeholder="27713">
+                            </div>
+                        </div>
+
+                        <a type="submit" id="add-new-teacher" class="button expanded teach panel-buttons">Submit</a>
+                        
+                    </form>
+                    
+                </div>
+                {{!-- <p class="text-center" id="teacher-info-updated ">Thank you {{teacherData.firstName}}, your information has been updated!</p> --}}
+            </div>
+
+        </div>
+    </div>
+</section>
